@@ -41,7 +41,7 @@ const result1 = countOnly(firstNames, {
   Karima: true,
   Fang: true
 });
-console.log(result1);
+// console.log(result1);
 
 assertEqual(result1["Jason"], 1);
 assertEqual(result1["Karima"], undefined);
