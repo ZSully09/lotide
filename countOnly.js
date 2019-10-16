@@ -20,7 +20,6 @@ const countOnly = function(allItems, itemsToCount) {
         results[item] = 1;
       }
     }
-    console.log(item);
   }
   return results;
 };
@@ -42,6 +41,7 @@ const result1 = countOnly(firstNames, {
   Karima: true,
   Fang: true
 });
+console.log(result1);
 
 assertEqual(result1["Jason"], 1);
 assertEqual(result1["Karima"], undefined);
