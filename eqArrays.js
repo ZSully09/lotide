@@ -12,7 +12,7 @@ const eqArrays = function(array1, array2) {
     if (array1[i] === array2[i]) {
       //continue
     } else {
-      //test 2:: console.log("non match found", array1[i], array2[i]);
+      //test 2: console.log("non match found", array1[i], array2[i]);
       return false;
     }
   }
