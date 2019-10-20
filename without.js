@@ -20,8 +20,11 @@ const assertArraysEqual = function(array1, array2) {
 
 const without = function(array, itemsToRemove) {
   let newArray = [];
+  // iterate over the given array
   for (let i = 0; i < array.length; i++) {
+    // iterate over the itemstoRemove array
     for (let x = 0; x < itemsToRemove.length; x++) {
+      // if the element in the given array is equal to the element in the itemsToRemove array then break from the loop
       if (array[i] === itemsToRemove[x]) {
         break;
       }
