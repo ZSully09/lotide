@@ -1,25 +1,25 @@
-const eqArrays = function(array1, array2) {
-  if (array1.length !== array2.length) {
-    return false;
-  }
-  for (let i = 0; i < array1.length; i++) {
-    // test 1: console.log("start of loop", array1[i]);
-    if (array1[i] !== array2[i]) {
-      //test 2: console.log("non match found", array1[i], array2[i]);
-      return false;
-    }
-  }
-  return true;
-};
+// const eqArrays = function(array1, array2) {
+//   if (array1.length !== array2.length) {
+//     return false;
+//   }
+//   for (let i = 0; i < array1.length; i++) {
+//     // test 1: console.log("start of loop", array1[i]);
+//     if (array1[i] !== array2[i]) {
+//       //test 2: console.log("non match found", array1[i], array2[i]);
+//       return false;
+//     }
+//   }
+//   return true;
+// };
 
-const assertArraysEqual = function(array1, array2) {
-  //use eqArrays function for the array comparisson
-  if (eqArrays(array1, array2)) {
-    console.log(`✅✅✅ Assertion Passed: ${array1} === ${array2}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${array1} !== ${array2}`);
-  }
-};
+// const assertArraysEqual = function(array1, array2) {
+//   //use eqArrays function for the array comparisson
+//   if (eqArrays(array1, array2)) {
+//     console.log(`✅✅✅ Assertion Passed: ${array1} === ${array2}`);
+//   } else {
+//     console.log(`🛑🛑🛑 Assertion Failed: ${array1} !== ${array2}`);
+//   }
+// };
 // Create a version of map in order to get some practice building higher-order functions
 // The map function will take in two arguments:
 //    1. An array to map
@@ -46,8 +46,10 @@ const map = function(array, callback) {
 const results1 = map(words, word => word[0]);
 // console.log(results1);   test 6
 
-assertArraysEqual(results1, ["g", "c", "t", "m", "z"]);
-assertArraysEqual(results1, ["g", "c", "t", "m", "t"]);
-assertArraysEqual(results1, ["g", "c", "t", "m", "m", "z"]);
-results1.push("z"); //push a value into the array for test 7
-assertArraysEqual(results1, ["g", "c", "t", "m", "t", "z"]);
+// assertArraysEqual(results1, ["g", "c", "t", "m", "z"]);
+// assertArraysEqual(results1, ["g", "c", "t", "m", "t"]);
+// assertArraysEqual(results1, ["g", "c", "t", "m", "m", "z"]);
+// results1.push("z"); //push a value into the array for test 7
+// assertArraysEqual(results1, ["g", "c", "t", "m", "t", "z"]);
+
+module.exports = map;
