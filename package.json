@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@zsully09/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "lotide project from Lighthouse Labs Coding bootcamp: October 2019 cohort",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -20,7 +20,7 @@
     "url": "git+https://github.com/ZSully09/lotide.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Zach Sullivan",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ZSully09/lotide/issues"
