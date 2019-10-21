@@ -1,10 +1,18 @@
 // Peer programmed with KingOfRedOnions & drystar
 
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
+const assertObjectsEqual = function(actual, expected) {
+  // added line from compass
+  const inspect = require("util").inspect;
+  if (eqObjects(actual, expected)) {
+    console.log(
+      //pass actual and expected to inspect function
+      `✅✅✅ Assertion Passed: ${inspect(actual)} === ${inspect(expected)}`
+    );
   } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
+    console.log(
+      //pass actual and expected to inspect function
+      `🛑🛑🛑 Assertion Failed: ${inspect(actual)} !== ${inspect(expected)}`
+    );
   }
 };
 
@@ -43,7 +51,19 @@ const eqObjects = function(object1, object2) {
   return true;
 };
 
-// FUNCTION IMPLEMENTATION
-const assertObjectsEqual = function(actual, expected) {
-  // Implement me!
-};
+//modify tests to call assertObjectsEqual (from what was in eqObjects)
+const ab = { a: "1", b: "2" };
+const ba = { b: "2", a: "1" };
+
+assertObjectsEqual(ab, ba);
+
+const abc = { a: "1", b: "2", c: "3" };
+
+assertObjectsEqual(ab, abc);
+
+const cd = { c: "1", d: ["2", 3] };
+const dc = { d: ["2", 3], c: "1" };
+assertObjectsEqual(cd, dc);
+
+const cd2 = { c: "1", d: ["2", 3, 4] };
+assertObjectsEqual(cd, cd2);
